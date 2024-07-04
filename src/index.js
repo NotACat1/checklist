@@ -1,2 +1,2 @@
 // Пример импорта стилей Less
-import './test.less';
+import './main.less';
