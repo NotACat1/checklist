@@ -54,14 +54,13 @@
     "prettier": "^3.3.2",
     "style-loader": "^4.0.0",
     "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-less": "^3.0.1",
-    "stylelint-prettier": "^5.0.0",
+    "stylelint-config-recommended-less": "^3.0.1",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "@condorhero/stylelint-config-css": "^2.0.0",
     "normalize.css": "^8.0.1"
   }
 }

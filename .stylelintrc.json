@@ -1,13 +1,6 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": ["stylelint-less", "stylelint-prettier"],
+  "extends": ["stylelint-config-recommended-less"],
   "rules": {
-    "prettier/prettier": true,
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["extend", "ignores"]
-      }
-    ]
+    "block-no-empty": null
   }
 }
