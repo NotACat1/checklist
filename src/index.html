@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Кодировка и шапка страницы -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="./favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="./favicons/manifest.json" />
+    <link rel="yandex-tableau-widget" href="./favicons/tableau.json" />
+
+    <!-- Метатеги для браузера -->
+    <meta name="description" content="Тестовое задание для разработки компонента `Чеклиста`" />
+    <meta name="keywords" content="Webpack, LESS" />
+
+    <title>Чеклист</title>
+  </head>
+  <body>
+    <section class="component">
+      <svg class="circle" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle
+          class="circle__track"
+          r="29"
+          cx="30"
+          cy="30"
+          fill="transparent"
+          stroke="#ffffff80"
+          stroke-width="1"
+          stroke-dashoffset="0"
+        ></circle>
+        <circle
+          class="circle__progress"
+          r="29"
+          cx="30"
+          cy="30"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-dashoffset="0"
+          fill="transparent"
+          stroke-dasharray="113px"
+          style="transform: rotate(-90deg) translate(-60px, 0px)"
+        ></circle>
+        <text
+          class="circle__text"
+          x="30"
+          y="30"
+          fill="#ffffff"
+          font-size="20px"
+          text-anchor="middle"
+          dominant-baseline="middle"
+        >
+          1/7
+        </text>
+      </svg>
+      <div class="component__content">
+        <p class="component__subheader">Чеклист</p>
+        <h1 class="component__header">Выполнено: 1 из 7 действий</h1>
+        <p class="component__text">Следующее действие: Созвониться с клиентом до 23.05.24 12:00</p>
+      </div>
+      <button class="component__button">Открыть чеклист</button>
+    </section>
+  </body>
+</html>
