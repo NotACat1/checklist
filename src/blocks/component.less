@@ -1,0 +1,136 @@
+@color-background: #3579f5;
+@color-background-addition: #2364db;
+@color-background-white: #ffffff;
+
+@color-track: #ffffff80;
+@color-progress: #ffffff;
+
+@color-text-white: #ffffff;
+@color-text-blue: #4777ed;
+
+@radius-main: 10px;
+@radius-button: 6px;
+@radius-button-big: 40px;
+
+@font-family: 'Inter', 'Maison Neue', 'San Francisco', sans-serif;
+
+@circle-size: 60px;
+@total-tasks: 7;
+@completed-tasks: 1;
+
+@radius: 29;
+@circumference: 2 * 3.141592653589793 * @radius;
+@completion-percent: (@completed-tasks / @total-tasks);
+@dasharray: @circumference;
+@dashoffset: @circumference * (1 - @completion-percent);
+
+.component {
+  padding: 22px 16px;
+  min-width: 743px;
+  background-color: @color-background;
+  border-radius: @radius-main;
+
+  display: flex;
+  align-items: center;
+
+  &__content {
+    flex: 1 1 auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__subheader {
+    margin: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 10px;
+    background-color: @color-background-addition;
+    border-radius: @radius-button-big;
+
+    font-family: @font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @color-text-white;
+  }
+
+  &__header {
+    margin: 0;
+    font-family: @font-family;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: @color-text-white;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: @font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @color-text-white;
+  }
+
+  &__button {
+    flex: 1 1 auto;
+
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+
+    padding: 10px 32px;
+    background-color: @color-background-white;
+    border-radius: @radius-button;
+
+    font-family: @font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: @color-text-blue;
+    transition: all 200ms ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.circle {
+  flex: 0 0 auto;
+  margin-right: 16px;
+
+  fill: @color-background;
+  width: @circle-size;
+  height: @circle-size;
+
+  &__track {
+    stroke: @color-track;
+  }
+
+  &__progress {
+    stroke: @color-progress;
+    stroke-dasharray: @dasharray;
+    stroke-dashoffset: @dashoffset;
+  }
+
+  &__text {
+    font-family: @font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    fill: @color-text-white;
+  }
+}
